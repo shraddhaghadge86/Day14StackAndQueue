@@ -19,4 +19,25 @@ public class Queue {
     public void displayQueue() {
         linkedList.show();
     }
+    public void peek() {
+        if (linkedList.head != null) {
+            System.out.println("Peaked from Queue : " + linkedList.head.key);
+        } else {
+            System.out.println("No element left in the Queue.");
+        }
+    }
+
+    /*
+     * 5.method to delete peaked value
+     */
+    public void pop() {
+        linkedList.deleteLastNode();
+    }
+
+    public void emptyQueue() {
+        while (linkedList.head != null) {
+           pop();
+        }
+        peek();
+    }
 }
