@@ -19,4 +19,28 @@ public class Stack<T> {
     public void displayStack() {
         linkedList.show();
     }
+
+    public void peek() {
+        if (linkedList.head != null) {
+            System.out.println("Peaked from stack : " + linkedList.head.key);
+        } else {
+            System.out.println("No element left in the stack.");
+        }
+    }
+
+    /*
+     * 5.method to delete peaked value
+     */
+    public Node pop() {
+        peek();
+        linkedList.head = linkedList.head.next;
+        return linkedList.head;
+    }
+
+    public void emptyStack() {
+        while (linkedList.head != null) {
+            pop();
+        }
+        peek();
+    }
 }
