@@ -12,8 +12,15 @@ public class QueueMain {
         myQueue.append(56);
         myQueue.append(30);
         myQueue.append(56);
-        
+
         System.out.println("show data according fifo rule stack");
         myQueue.displayQueue();
+
+        System.out.println("Peak in a Queue");
+        myQueue.peek();
+
+        System.out.println("Pop the Elements in Queue");
+        myQueue.emptyQueue();
+
     }
 }
